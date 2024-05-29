@@ -1,0 +1,68 @@
+/* ProductList.module.css */
+
+.tableContainer {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 200px;
+  border: 1px solid #ddd;
+  text-align: left;
+  overflow: auto; /* Oculta el contenido excedente */
+}
+
+th {
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: #f5f5f5;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.inputLabel {
+  margin-right: 10px;
+}
+
+.editInput {
+  width: 100%;
+}
+
+.actions button {
+  cursor: pointer;
+  margin: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.actions button:hover {
+  background-color: #45a049;
+}
+
+.actions button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.actions button.cancel {
+  background-color: #f44336;
+}
+
+.actions button.cancel:hover {
+  background-color: #d32f2f;
+}

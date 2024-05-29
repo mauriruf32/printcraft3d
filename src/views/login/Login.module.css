@@ -1,0 +1,66 @@
+.formBackground {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .formContainerRegister {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formLabel {
+    margin-bottom: 5px;
+  }
+  
+  .formInput {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .text {
+    font-size: 12px;
+  }
+  
+  .submitButtonConten {
+    margin-top: 10px;
+  }
+  
+  .submitButton {
+    background-color: #1c7e09;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: #155d07;
+  }
+  
+  .subButton {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .subButton span {
+    color: #1c7e09;
+    cursor: pointer;
+  }
+  
+  .subButton span:hover {
+    text-decoration: underline;
+  }

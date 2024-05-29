@@ -1,0 +1,45 @@
+.aside {
+  display: inline-block;
+  width: 95%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+}
+
+/* checkboxx */
+
+.filtros:hover {
+  background: #ff5733;
+  transition: 0.2s ease-in-out;
+  border-radius: 0px 10px 10px 0px;
+}
+.darkMode {
+  background-color: #07070799; /* Cambia el color de fondo para el modo oscuro */
+  color: #acacac; /* Cambia el color del texto para el modo oscuro */
+}
+
+.AsideLabel {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.AsideInput {
+  display: none;
+}
+
+.span {
+  display: inline-block;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  background: black;
+  border-radius: 100%;
+}

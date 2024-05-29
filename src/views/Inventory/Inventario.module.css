@@ -1,0 +1,70 @@
+.InventarioContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #d3c8c9a4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.InventarioTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.InventarioLabel {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.InventarioInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.InventarioInput[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.InventarioSubmitButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.inventario-error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.error-field {
+    border: 1px solid #ff0000;
+}
+.PreviuImg {
+    position: absolute;
+    right: 10%;
+    top: 32%;
+    height: 50px;
+}
+
+.PreviuImg img {
+    width: 80px;
+    height: 80px;
+}

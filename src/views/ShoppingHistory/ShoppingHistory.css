@@ -1,0 +1,223 @@
+/* ShoppingHistory.css */
+
+.shopping-history-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.order-container {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.products-container {
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+.root-wrapper {
+  margin-top: 65px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.page-wrapper__content {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.ui-hub-reviews {
+  width: 100%;
+}
+
+.ui-hub-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.ui-hub-reviews .ui-hub-reviews--content {
+  margin: 0 73px;
+}
+
+.ui-hub-reviews--content {
+  max-width: 1200px;
+  padding: 0;
+  width: 100%;
+}
+.ui-reviews-label,
+.ui-reviews-label-builder {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  gap: 2px 4px;
+  line-height: 1;
+  white-space: pre-wrap;
+}
+
+.ui-reviews-ui-hub-reviews--title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.ui-hub-reviews {
+  width: 100%;
+}
+
+.ui-hub-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ui-hub-reviews .andes-tabs__container {
+  width: 100%;
+}
+
+.andes-tabs__container {
+  position: relative;
+}
+
+.ui-list-items {
+  padding-top: 24px;
+}
+
+.andes-card {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.andes-card--padding-16 {
+  padding: 16px;
+}
+
+.ui-card-pending {
+  padding-left: 24px !important;
+}
+
+.ui-hub-reviews .ui-card-pending-card .ui-card-pending-container {
+  align-items: flex-start;
+  flex-direction: row;
+}
+.ui-card-pending--review--info,
+.ui-card-pending-container {
+  display: flex;
+}
+
+.ui-card-pending-container {
+  width: 100%;
+}
+
+.ui-card-pending-product {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.ui-hub-reviews
+  .ui-card-pending-card
+  .ui-card-pending-container
+  .ui-card-pending--review--info {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.ui-card-pending--review--info,
+.ui-card-pending-container {
+  display: flex;
+}
+
+.ui-card-pending__image-container {
+  height: 72px;
+  margin-right: 16px;
+}
+
+.ui-card-pending-product-img {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ui-card-pending-product-img {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  height: 72px;
+  width: 72px;
+}
+
+@media (max-width: 1213px) {
+  .ui-hub-reviews
+    .ui-card-pending-card
+    .ui-card-pending-container
+    .ui-card-pending--review--info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.ui-card-pending--review--info,
+.ui-card-pending-container {
+  display: flex;
+}
+
+.ui-card-pending--review--info {
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.ui-card-pending-product-title .ui-reviews-label {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 16px;
+}
+
+.ui-card-pending-product-title .ui-reviews-label {
+  font-weight: 600;
+  line-height: 18px;
+}
+
+ui-reviews-label,
+.ui-reviews-label-builder {
+  align-items: center;
+  display: flex;
+  flex-flow: wrap;
+  gap: 2px 4px;
+  line-height: 1;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 1213px) {
+  .ui-hub-reviews
+    .ui-card-pending-card
+    .ui-card-pending-container
+    .ui-review--rating-select {
+    padding: 0 !important;
+  }
+}
+
+.ui-card-pending .ui-review--rating-select {
+  margin: 19px 0 13px !important;
+  padding: 0 43px 0 50px;
+}
+
+.ui-review--rating-select {
+  position: relative;
+}

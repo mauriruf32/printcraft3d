@@ -1,0 +1,123 @@
+@import "../../Style/StyleMaster.module.css";
+
+.main {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.ContainerCarusel {
+  grid-column: 1 /4;
+}
+.dark-mode {
+  background-color: #07070799;
+  color: #acacac;
+}
+.darkMode {
+  background-color: #07070799; /* Cambia el color de fondo para el modo oscuro */
+  color: #acacac; /* Cambia el color del texto para el modo oscuro */
+}
+.ContainerAsaider {
+  grid-column: 1/2;
+  gap: 1rem;
+}
+
+.ContainerHome {
+  grid-column: 2/4;
+  min-width: 350px;
+  width: 100%;
+  background-color: #dfe3eb;
+}
+.ContainerCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-right: 2rem;
+}
+
+.ContainerFooter {
+  grid-column: 1/4;
+}
+
+@media (width < 768px) {
+  .main {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ContainerCarusel {
+    grid-column: 1/4;
+  }
+
+  .ContainerAsaider {
+    grid-column: 1/4;
+  }
+
+  .ContainerHome {
+    grid-column: 2/4;
+    min-width: 350px;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.ContainerAsaider,
+.ContainerFilter {
+  margin: 0;
+}
+
+.ContainerAsaider {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.ContainerAsaider aside {
+  margin-left: 1rem;
+}
+
+.ContainerCarusel {
+  min-width: 100%;
+}
+
+.ContainerCards {
+  min-width: 300px;
+}
+
+.ContainerFooter {
+  width: 100%;
+  height: 300px;
+  background: transparent;
+  overflow: auto;
+}
+
+.BTNPreviu,
+.BTNNext,
+.BTNResetCards {
+  background-color: var(--btn-paginado-background);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.BTNPreviu:hover,
+.BTNNext:hover,
+.BTNResetCards:hover {
+  background-color: var(--btn-paginado-hover);
+}
+
+.SpanCurrentPage {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  width: 100%;
+  grid-column: 2/4;
+  padding: 1rem;
+}

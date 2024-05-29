@@ -1,0 +1,34 @@
+mb-4,
+.my-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.filter-results {
+  color: #454a55;
+  font-size: 24px;
+  list-style: 22px;
+}
+
+.result-desc {
+  color: #6d737d;
+}
+
+.reset-button {
+  background: none;
+  border: 0;
+  color: #4483d0;
+  font-size: 18px;
+  line-height: 16px;
+}

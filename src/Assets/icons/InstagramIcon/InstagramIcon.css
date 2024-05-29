@@ -1,0 +1,19 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon-instagram {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg-icon-instagram path,
+.svg-icon-instagram polygon,
+.svg-icon-instagram rect {
+  fill: #ffffff;
+}
+
+.svg-icon-instagram circle {
+  stroke: #ffffff;
+  stroke-width: 1;
+}

@@ -1,0 +1,19 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon-twitter {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg-icon-twitter path,
+.svg-icon-twitterpolygon,
+.svg-icon-twitter rect {
+  fill: #ffffff;
+}
+
+.svg-icon-twitter circle {
+  stroke: #ffffff;
+  stroke-width: 1;
+}

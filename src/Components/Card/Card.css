@@ -1,0 +1,139 @@
+.detail-card {
+  display: flex;
+  align-items: center;
+  min-width: 350px;
+  min-height: 400px;
+  cursor: pointer;
+ }
+ 
+ .detail-card .detail-img {
+  border-radius: 8px;
+  height: 400px;
+  left: -250px;
+  position: absolute;
+  top: 80px;
+  width: 350px;
+ }
+
+ .detail-card .detail-info {
+  padding-left: 100px;
+ }
+
+.product-card .product-image {
+  border-radius: 8px;
+  height: 160px;
+  left: 20px;
+  position: absolute;
+  top: -80px;
+  width: 130px;
+}
+
+.product-card {
+  margin: 120px 5px 10px 50px;
+  width: 260px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 285px;
+  padding: 90px 20px 15px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-title {
+  color: #4483d0;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 0.3rem !important;
+  text-align: left;
+}
+
+.product-desc {
+  color: #6d737d;
+  font-size: 18px;
+  line-height: 16px;
+  margin-top: 0.5rem !important;
+  margin-bottom: 1rem !important;
+  text-align: left;
+}
+.product-card:hover {
+  top: -3px;
+}
+
+.add-to-cart-parent {
+  font-family: wlasheim, Helvetica, Arial, Lucida Grande, sands-serif;
+  margin-top: 15px;
+  text-align: right;
+}
+
+.cart-parent {
+  align-items: center;
+  display: flex;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.cart-btn {
+  background: #202020;
+  height: 35px;
+  color: #fff;
+}
+
+.fa {
+  margin-right: 5px;
+  color: #fff;
+  display: inline-block;
+  font: normal;
+  font-size: inherit;
+  text-rendering: auto;
+}
+
+.add-to-cart-parent .cart-btn {
+  border: 1px solid #202020;
+  border-radius: 5px;
+  font-family: walsheim, Arial, Helvetica, sans-serif, Arial, Lucida Grande;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 14px;
+  min-width: 110px;
+  padding: 6px, 10px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.fa-plus::before {
+  content: "+";
+}
+
+.cart-price {
+  display: inline-block;
+  font-family: walsheim, Arial, Helvetica, sans-serif, Lucida Grande;
+  margin-left: auto;
+}
+
+.size-info {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #8e939b;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+.material-info {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  color: #8e939b;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}

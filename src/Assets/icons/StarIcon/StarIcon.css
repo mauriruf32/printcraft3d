@@ -1,0 +1,28 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon-star {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.svg-icon-star path,
+.svg-icon-star polygon,
+.svg-icon-star rect {
+  fill: #4691f6;
+}
+
+.svg-icon-star circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+.svg-icon-star:hover {
+  cursor: grab;
+  fill: #4691f6;
+}
+
+.checked {
+  color: rgb(57, 57, 224);
+}

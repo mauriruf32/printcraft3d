@@ -1,0 +1,20 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon-basura {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0.3em;
+}
+
+.svg-icon-basura path,
+.svg-icon-basura polygon,
+.svg-icon-basura rect {
+  fill: #000000;
+}
+
+.svg-icon-basura circle {
+  stroke: #000000;
+  stroke-width: 1;
+}
