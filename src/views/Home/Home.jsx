@@ -16,7 +16,7 @@ function Home() {
   const searchValue = useSelector((state) => state.searchValue);
   const userData = useSelector((state) => state.userData);
 
-  const [loading, setLoading] = useState(false); // Cambiado a false porque no hay carga desde API
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   //estados para el paginado
@@ -41,12 +41,12 @@ function Home() {
     setTotalPages(Math.ceil(products.length / newLimit));
   };
 
-  const handleMaterialChange = (material) => {
-    setSelectedMaterials(material);
+  const handleMaterialChange = (materialName) => {
+    setSelectedMaterials(materialName);
   };
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
+  const handleCategoryChange = (categoryName) => {
+    setSelectedCategory(categoryName);
   };
 
   const handleSizeChange = (size) => {
@@ -89,7 +89,8 @@ function Home() {
     });
 
     dispatch(addProductInfo(filteredProducts));
-  }, [selectedMaterials, selectedCategory, selectedSize, searchValue, dispatch]);
+    setTotalPages(Math.ceil(filteredProducts.length / limit));
+  }, [selectedMaterials, selectedCategory, selectedSize, searchValue, dispatch, limit]);
 
   // funciones relacionadas con el carrito
   const addToCart = async (userId, productId) => {
@@ -162,8 +163,6 @@ function Home() {
         };
         localStorage.setItem("cart", JSON.stringify(updatedCart));
       }
-      //console.log(`User ID: ${userData.userId}`);
-      //console.log(`Product ID: ${productId}`);
       addToCart(userData.userId, productId);
     } else {
       Swal.fire({
@@ -187,16 +186,17 @@ function Home() {
 
   const allProducts = useSelector((state) => state.allProducts);
 
+  // Calcular los productos a mostrar basado en la página actual y el límite
+  const indexOfLastProduct = currentPage * limit;
+  const indexOfFirstProduct = indexOfLastProduct - limit;
+  const currentProducts = allProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
   return (
     <main className={`${style.main} ${darkMode ? style.darkMode : ""}`}>
       <div className={style.ContainerCarusel}>
         <CarouselHome />
       </div>
-      <div
-        className={`${style.ContainerAsaider} ${
-          darkMode ? style.darkMode : ""
-        }`}
-      >
+      <div className={`${style.ContainerAsaider} ${darkMode ? style.darkMode : ""}`}>
         <Aside
           onMaterialChange={handleMaterialChange}
           onCategoryChange={handleCategoryChange}
@@ -216,9 +216,9 @@ function Home() {
             <p>Cargando productos...</p>
           ) : error ? (
             <p>{error}</p>
-          ) : allProducts && allProducts.length > 0 ? (
+          ) : currentProducts && currentProducts.length > 0 ? (
             <div className={style.ContainerCards}>
-              {allProducts.map((e) => (
+              {currentProducts.map((e) => (
                 <Card
                   key={e.id}
                   id={e.id}
@@ -227,8 +227,8 @@ function Home() {
                   description={e.description}
                   size={e.size}
                   price={e.price}
-                  material={e.material}
-                  category={e.category}
+                  material={e.materialName}
+                  category={e.categoryName}
                   addToCart={() => handleProductAddToCart(e.id)}
                 />
               ))}

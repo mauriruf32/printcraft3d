@@ -2,42 +2,42 @@ import React from "react";
 import style from "./Aside.module.css";
 import "./Aside.css";
 import FiltersAccordion from "../FiltersAccordion/FiltersAccordion";
+import { products } from "../../views/Home/Data.js";
 
 const Aside = ({
   onMaterialChange,
   onCategoryChange,
   onSizeChange,
-  allProducts,
   resetAllFilters,
 }) => {
   const getAllProductsCounts = () => {
     let counts = {};
-    counts["ABSCount"] = allProducts.filter((e) => {
-      return e.material === "ABS";
+    counts["ABSCount"] = products.filter((e) => {
+      return e.materialName === "ABS";
+    })
+    counts["PLACount"] = products.filter((e) => {
+      return e.materialName === "PLA";
     }).length;
-    counts["PLACount"] = allProducts.filter((e) => {
-      return e.material === "PLA";
+    counts["TPUCount"] = products.filter((e) => {
+      return e.materialName === "TPU";
     }).length;
-    counts["TPUCount"] = allProducts.filter((e) => {
-      return e.material === "TPU";
+    counts["accesorioCount"] = products.filter((e) => {
+      return e.categoryName === "accesorio";
     }).length;
-    counts["accesorioCount"] = allProducts.filter((e) => {
-      return e.category === "accesorio";
+    counts["figuraCount"] = products.filter((e) => {
+      return e.categoryName === "figura";
     }).length;
-    counts["figuraCount"] = allProducts.filter((e) => {
-      return e.category === "figura";
+    counts["decoracionCount"] = products.filter((e) => {
+      return e.categoryName === "decoracion";
     }).length;
-    counts["decoracionCount"] = allProducts.filter((e) => {
-      return e.category === "decoracion";
-    }).length;
-    counts["sizeMCount"] = allProducts.filter((e) => {
+    counts["sizeMCount"] = products.filter((e) => {
       return e.size === "M";
     }).length;
-    counts["sizeLCount"] = allProducts.filter((e) => {
-      return e.size === "L";
+    counts["sizeLCount"] = products.filter((e) => {
+      return e.size === "l";
     }).length;
-    counts["sizeSCount"] = allProducts.filter((e) => {
-      return e.size === "S";
+    counts["sizeSCount"] = products.filter((e) => {
+      return e.size === "s";
     }).length;
     return counts;
   };
@@ -48,7 +48,7 @@ const Aside = ({
           <div className="d-flex justify-content-between align-items-center mb-4">
             <div className="filter-results">
               Filter results
-              <span className="result-desc"> ({allProducts.length})</span>
+              <span className="result-desc"> ({products.length})</span>
             </div>
             <button className="reset-button" onClick={resetAllFilters}>
               Reset All
@@ -67,4 +67,3 @@ const Aside = ({
 };
 
 export default Aside;
-//X
