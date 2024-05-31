@@ -1,6 +1,6 @@
 :root {
 
-    --color-primary: #6C9BCF;
+    --color-primary: #93b6dd;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
     --color-warning: #d6ba1da4;
@@ -18,7 +18,7 @@
 
 
     /* Nabar style*/
-    --Nabar-background: #2a588b;
+    --Nabar-background: #5da5f7;
     --Nabar-text: #fff;
 
     /*Cards*/

@@ -3,6 +3,7 @@ import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import logo from "../../imagenes/logo.png";
 import { useDispatch } from "react-redux";
 import { updateSearchValue } from "../../redux/actions/actions.js";
+import style from "./NavBar.module.css";
 
 function NavBar({ userData, logout }) {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ function NavBar({ userData, logout }) {
   }, [localSearchValue, dispatch]);
 
   return (
-    <Navbar expand="lg" bg="transparent" data-bs-theme="dark" fixed="top">
+    <Navbar className={style.NavBar} expand="lg" data-bs-theme="dark" fixed="top">
       <Container fluid>
         <Navbar.Brand href="/">
           <img

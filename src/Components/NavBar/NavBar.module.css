@@ -1,19 +1,11 @@
 @import "../../Style/StyleMaster.module.css";
 
 
-/* .NavBar { 
+ .NavBar { 
     background-color: var(--Nabar-background);
-    height: 70px;
-    width: 100%;
-    position: fixed;
-    display: grid; 
-    top: 0;
 
-    left: 0;
-    width: 100%;
-    z-index: 999;
 }
-
+/*
 .AsideNavBar{
     height: 100%;
     display: flex;

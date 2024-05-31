@@ -7,19 +7,18 @@ import { Container } from "react-bootstrap";
 
 function CarouselHome() {
   return (
-    <Container className="w-100 position-relative">
+    
       <Carousel>
         <Carousel.Item interval={5000}>
-          <img className="d-block w-100" src={image1} alt="img1" />
+          <img className="w-100 d-block" src={image1} alt="img1" />
         </Carousel.Item>
         <Carousel.Item interval={5000}>
-          <img className="d-block w-100" src={image2} alt="img2" />
+          <img className="w-100"  src={image2} alt="img2" />
         </Carousel.Item>
         <Carousel.Item interval={5000}>
-          <img className="d-block w-100" src={image3} alt="img3" />
+          <img className="w-100"  src={image3} alt="img3" />
         </Carousel.Item>
       </Carousel>
-    </Container>
   );
 }
 

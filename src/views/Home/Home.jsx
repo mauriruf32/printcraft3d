@@ -19,16 +19,15 @@ function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  //estados para el paginado
+  // estados para el paginado
   const [currentPage, setCurrentPage] = useState(1);
   const [limit, setLimit] = useState(12);
-  const [totalPages, setTotalPages] = useState(Math.ceil(products.length / limit));
   const [darkMode, setDarkMode] = useState(() => {
     const savedDarkMode = localStorage.getItem("darkMode");
     return savedDarkMode === "true";
   });
 
-  //estados para los filtros
+  // estados para los filtros
   const [selectedMaterials, setSelectedMaterials] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
@@ -38,28 +37,30 @@ function Home() {
     const newLimit = parseInt(event.target.value, 10);
     setLimit(newLimit);
     setCurrentPage(1);
-    setTotalPages(Math.ceil(products.length / newLimit));
   };
 
   const handleMaterialChange = (materialName) => {
     setSelectedMaterials(materialName);
+    setCurrentPage(1); // Reset page to 1 when filter changes
   };
 
   const handleCategoryChange = (categoryName) => {
     setSelectedCategory(categoryName);
+    setCurrentPage(1); // Reset page to 1 when filter changes
   };
 
   const handleSizeChange = (size) => {
     setSelectedSize(size);
+    setCurrentPage(1); // Reset page to 1 when filter changes
   };
 
   const resetAllFilters = () => {
     setSelectedMaterials(null);
     setSelectedCategory(null);
     setSelectedSize(null);
+    setCurrentPage(1); // Reset page to 1 when filters are reset
   };
 
-  // funcion cambio de pagina - paginado
   const loadPage = (page) => {
     if (page < 1 || page > totalPages) {
       return;
@@ -67,32 +68,23 @@ function Home() {
     setCurrentPage(page);
   };
 
-  // funcion que devuelve el valor de current page
-  // lo usa el componente paginado
-  const getCurrentPage = () => {
-    return currentPage;
-  };
-  // funcion que devuelve el valor de totalPages
-  // lo usa el componente paginado
-  const getTotalPages = () => {
-    return totalPages;
-  };
+  const getCurrentPage = () => currentPage;
+
+  const filteredProducts = products.filter((product) => {
+    return (
+      (!selectedMaterials || product.materialName === selectedMaterials) &&
+      (!selectedCategory || product.categoryName === selectedCategory) &&
+      (!selectedSize || product.size === selectedSize) &&
+      (!searchValue || product.name.toLowerCase().includes(searchValue.toLowerCase()))
+    );
+  });
+
+  const totalPages = Math.ceil(filteredProducts.length / limit);
 
   useEffect(() => {
-    const filteredProducts = products.filter((product) => {
-      return (
-        (!selectedMaterials || product.materialName === selectedMaterials) &&
-        (!selectedCategory || product.categoryName === selectedCategory) &&
-        (!selectedSize || product.size === selectedSize) &&
-        (!searchValue || product.name.toLowerCase().includes(searchValue.toLowerCase()))
-      );
-    });
-
     dispatch(addProductInfo(filteredProducts));
-    setTotalPages(Math.ceil(filteredProducts.length / limit));
   }, [selectedMaterials, selectedCategory, selectedSize, searchValue, dispatch, limit]);
 
-  // funciones relacionadas con el carrito
   const addToCart = async (userId, productId) => {
     try {
       const response = await axios.post(`${URL}addOneToCart`, {
@@ -137,17 +129,14 @@ function Home() {
   const handleProductAddToCart = (productId) => {
     if (userData?.userId) {
       const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
-      //Busca si existe el id del producto en el carrito
       const existingProductIndex = currentCart.findIndex(
         (product) => product.id === productId
       );
-      //Si no existe en el carrito lo busca en el Estado global
       if (existingProductIndex === -1) {
         const productToAdd = products.find(
           (product) => product.id === productId
         );
         if (productToAdd) {
-          //Una vez que lo encuentra en el Estado lo agrega al carrito
           const updatedCart = [
             ...currentCart,
             { ...productToAdd, cantidad: 1 },
@@ -155,7 +144,6 @@ function Home() {
           localStorage.setItem("cart", JSON.stringify(updatedCart));
         }
       } else {
-        // Si ya está en el carrito, actualiza el contador
         const updatedCart = [...currentCart];
         updatedCart[existingProductIndex] = {
           ...updatedCart[existingProductIndex],
@@ -179,17 +167,14 @@ function Home() {
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => {
       const newDarkMode = !prevDarkMode;
-      localStorage.setItem("darkMode", newDarkMode.toString()); // Guarda en localStorage
+      localStorage.setItem("darkMode", newDarkMode.toString());
       return newDarkMode;
     });
   };
 
-  const allProducts = useSelector((state) => state.allProducts);
-
-  // Calcular los productos a mostrar basado en la página actual y el límite
   const indexOfLastProduct = currentPage * limit;
   const indexOfFirstProduct = indexOfLastProduct - limit;
-  const currentProducts = allProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   return (
     <main className={`${style.main} ${darkMode ? style.darkMode : ""}`}>
@@ -201,7 +186,7 @@ function Home() {
           onMaterialChange={handleMaterialChange}
           onCategoryChange={handleCategoryChange}
           onSizeChange={handleSizeChange}
-          allProducts={allProducts}
+          allProducts={products}
           resetAllFilters={resetAllFilters}
           darkMode={darkMode}
         />
@@ -242,7 +227,7 @@ function Home() {
         <div>
           <Paginado
             getCurrentPage={getCurrentPage}
-            getTotalPages={getTotalPages}
+            getTotalPages={() => totalPages}
             handleLimitChange={handleLimitChange}
             loadPage={loadPage}
           />
@@ -257,7 +242,6 @@ function Home() {
 }
 
 export default Home;
-
 
 
 

@@ -7,6 +7,8 @@
 }
 .ContainerCarusel {
   grid-column: 1 /4;
+  width:  100%;
+  
 }
 .dark-mode {
   background-color: #000000;
@@ -83,9 +85,6 @@
   margin-left: 1rem;
 }
 
-.ContainerCarusel {
-  min-width: 100%;
-}
 
 .ContainerCards {
   min-width: 300px;
