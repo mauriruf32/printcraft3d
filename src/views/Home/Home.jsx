@@ -207,17 +207,17 @@ function Home() {
         />
       </div>
 
-      <div className={style.ContainerHome}>
+      <div className={`${style.ContainerHome} ${darkMode ? style.darkMode : ""}`}>
         <button className={style.BTNDarkMode} onClick={toggleDarkMode}>
           {darkMode ? "Modo Claro" : "Modo Oscuro"}
         </button>
-        <div className={style.ContainerCards}>
+        <div className={`${style.ContainerCards} ${darkMode ? style.darkMode : ""}`}>
           {loading ? (
             <p>Cargando productos...</p>
           ) : error ? (
             <p>{error}</p>
           ) : currentProducts && currentProducts.length > 0 ? (
-            <div className={style.ContainerCards}>
+            <div className={`${style.ContainerCards} ${darkMode ? style.darkMode : ""}`}>
               {currentProducts.map((e) => (
                 <Card
                   key={e.id}
@@ -257,6 +257,8 @@ function Home() {
 }
 
 export default Home;
+
+
 
 
 // import React, { useEffect, useState } from "react";

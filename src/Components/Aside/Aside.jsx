@@ -9,12 +9,12 @@ const Aside = ({
   onCategoryChange,
   onSizeChange,
   resetAllFilters,
-}) => {
+}) => { 
   const getAllProductsCounts = () => {
     let counts = {};
     counts["ABSCount"] = products.filter((e) => {
       return e.materialName === "ABS";
-    })
+    }).length;
     counts["PLACount"] = products.filter((e) => {
       return e.materialName === "PLA";
     }).length;
@@ -31,7 +31,7 @@ const Aside = ({
       return e.categoryName === "decoracion";
     }).length;
     counts["sizeMCount"] = products.filter((e) => {
-      return e.size === "M";
+      return e.size === "m";
     }).length;
     counts["sizeLCount"] = products.filter((e) => {
       return e.size === "l";

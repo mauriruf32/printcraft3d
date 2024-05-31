@@ -9,12 +9,12 @@
   grid-column: 1 /4;
 }
 .dark-mode {
-  background-color: #07070799;
-  color: #acacac;
+  background-color: #121212;
+  color: #000000;
 }
 .darkMode {
-  background-color: #07070799; /* Cambia el color de fondo para el modo oscuro */
-  color: #acacac; /* Cambia el color del texto para el modo oscuro */
+  background-color: #121212; /* Cambia el color de fondo para el modo oscuro */
+  color: #000000; /* Cambia el color del texto para el modo oscuro */
 }
 .ContainerAsaider {
   grid-column: 1/2;
@@ -25,7 +25,7 @@
   grid-column: 2/4;
   min-width: 350px;
   width: 100%;
-  background-color: #dfe3eb;
+  background-color: #ffffff;
 }
 .ContainerCards {
   display: grid;
@@ -35,6 +35,14 @@
 
 .ContainerFooter {
   grid-column: 1/4;
+}
+
+.ContainerHome.darkMode {
+  background-color: #333; /* color de fondo para el modo oscuro */
+}
+
+.ContainerCards.darkMode {
+  background-color: #444; /* color de fondo para el modo oscuro */
 }
 
 @media (width < 768px) {
