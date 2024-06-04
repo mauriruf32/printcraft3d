@@ -1,6 +1,6 @@
 :root {
 
-    --color-primary: #93b6dd;
+    --color-primary: #5da5f7;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
     --color-warning: #d6ba1da4;
@@ -20,6 +20,9 @@
     /* Nabar style*/
     --Nabar-background: #5da5f7;
     --Nabar-text: #fff;
+
+    /* Footer atyle */
+    --Footer-background: #5da5f7;
 
     /*Cards*/
     --Cards-background:#3498db;
