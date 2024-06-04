@@ -18,21 +18,21 @@
   background-color: #000000;; /* Cambia el color de fondo para el modo oscuro */
   color: #000000; /* Cambia el color del texto para el modo oscuro */
 }
-.ContainerAsaider {
+/* .ContainerAsaider {
   grid-column: 1/2;
-  gap: 1rem;
-}
+} */
 
 .ContainerHome {
   grid-column: 2/4;
   min-width: 350px;
   width: 100%;
   background-color: #ffffff;
+  margin-bottom: 50px;
 }
 .ContainerCards {
+  margin-bottom: 50%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin-right: 2rem;
 }
 
 .ContainerFooter {
@@ -75,15 +75,15 @@
 }
 
 .ContainerAsaider {
-  width: 100%;
+  /* width: 50%; */
   max-width: 500px;
   min-width: 300px;
   overflow: hidden;
 }
 
-.ContainerAsaider aside {
+/* .ContainerAsaider aside {
   margin-left: 1rem;
-}
+} */
 
 
 .ContainerCards {
@@ -92,7 +92,6 @@
 
 .ContainerFooter {
   width: 100%;
-  height: 300px;
   background: transparent;
   overflow: auto;
 }

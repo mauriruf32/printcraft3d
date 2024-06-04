@@ -45,11 +45,8 @@ const Aside = ({
     <div>
       <aside className={style.aside}>
         <div>
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <div className="filter-results">
-              Filter results
-              <span className="result-desc"> ({products.length})</span>
-            </div>
+          <div className="d-flex justify-content-left align-items-center mb-4">
+
             <button className="reset-button" onClick={resetAllFilters}>
               Reset All
             </button>

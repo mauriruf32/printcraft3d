@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import "./App.css";
 import React, { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./views/Home/Home.jsx";

@@ -13,6 +13,8 @@
   position: absolute;
   top: 80px;
   width: 350px;
+  box-shadow: 0 0 30px #3498db;
+
  }
 
  .detail-card .detail-info {
@@ -26,6 +28,8 @@
   position: absolute;
   top: -80px;
   width: 130px;
+  box-shadow: 0 0 30px #3498db;
+
 }
 
 .product-card {
@@ -40,7 +44,7 @@
   min-height: 285px;
   padding: 90px 20px 15px;
   position: relative;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 30px #3498db; */
 }
 
 .product-title {
@@ -61,6 +65,8 @@
 }
 .product-card:hover {
   top: -3px;
+  box-shadow: 0 0 30px #3498db;
+
 }
 
 .add-to-cart-parent {
