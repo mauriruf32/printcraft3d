@@ -3,7 +3,7 @@
 
  .NavBar { 
     background-color: var(--Nabar-background);
-
+    width: 100%;
 }
 /*
 .AsideNavBar{

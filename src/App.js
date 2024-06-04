@@ -90,7 +90,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="App row justify-content-center">
+    <div className="App justify-content-center">
       {pathname !== "/LoginUp" &&
         pathname !== "/Inventory" &&
         pathname !== "/Register" && (

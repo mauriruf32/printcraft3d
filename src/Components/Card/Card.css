@@ -13,7 +13,7 @@
   position: absolute;
   top: 80px;
   width: 350px;
-  box-shadow: 0 0 30px #3498db;
+  box-shadow: 0 0 30px #ffffff;
 
  }
 
@@ -28,7 +28,7 @@
   position: absolute;
   top: -80px;
   width: 130px;
-  box-shadow: 0 0 30px #3498db;
+  box-shadow: 0 0 30px #ffffff;
 
 }
 
@@ -44,7 +44,7 @@
   min-height: 285px;
   padding: 90px 20px 15px;
   position: relative;
-  /* box-shadow: 0 0 30px #3498db; */
+  box-shadow: 0 0 30px #3498db;
 }
 
 .product-title {

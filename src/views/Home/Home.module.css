@@ -24,10 +24,10 @@
 
 .ContainerHome {
   grid-column: 2/4;
-  min-width: 350px;
+  /* min-width: 350px; */
   width: 100%;
   background-color: #ffffff;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .ContainerCards {
   margin-bottom: 50%;
@@ -63,8 +63,8 @@
 
   .ContainerHome {
     grid-column: 2/4;
-    min-width: 350px;
-    width: 100%;
+    /* min-width: 350px; */
+    width: 50%;
     margin: 0;
   }
 }

@@ -22,7 +22,7 @@ function NavBar({ userData, logout }) {
   }, [localSearchValue, dispatch]);
 
   return (
-    <Navbar className={style.NavBar} expand="lg" data-bs-theme="dark" fixed="top">
+    <Navbar className={style.NavBar} expand="lg" data-bs-theme="dark" >
       <Container fluid>
         <Navbar.Brand href="/">
           <img
