@@ -31,6 +31,7 @@
 }
 .ContainerCards {
   display: grid;
+  margin-right: 50px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -80,9 +81,9 @@
   overflow: hidden;
 }
 
-/* .ContainerAsaider aside {
-  margin-left: 1rem;
-} */
+.ContainerAsaider aside {
+  margin-left: 7rem;
+}
 
 
 .ContainerCards {
@@ -110,11 +111,16 @@
 .BTNPreviu:hover,
 .BTNNext:hover,
 .BTNResetCards:hover {
-  background-color: #000000;
+  background-color: #ff5733;
 }
 
 .BTNDarkMode:hover{
-  background-color: darkmagenta;
+  background-color: #ff5733;
+  color: #ffffff;
+}
+
+.BTNDarkMode{
+color: #ffffff;
 }
 
 .SpanCurrentPage {

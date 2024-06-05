@@ -34,7 +34,8 @@ mb-4,
 }
 
 .reset-button:hover {
-  background-color: blueviolet;
+  background-color: #ff5733;
+  color: #ffffff;
 }
 
 .acord:hover {

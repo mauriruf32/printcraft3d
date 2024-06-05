@@ -68,9 +68,9 @@ const FiltersAccordion = ({
   };
 
   return (
-    <Accordion defaultActiveKey={["0"]} alwaysOpen className="title2">
-      <Accordion.Item  eventKey="0">
-        <Accordion.Header >
+    <Accordion defaultActiveKey={["0"]}  className="title2" flush>
+      <Accordion.Item  flush eventKey="0">
+        <Accordion.Header className="header"  >
           <div className="title">
             <strong>Materiales</strong>
           </div>

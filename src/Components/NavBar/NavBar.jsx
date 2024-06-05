@@ -35,38 +35,30 @@ function NavBar({ userData, logout }) {
           PrintCraft3D
         </Navbar.Brand>
 
-        <Nav
-          className="me-auto my-2 my-lg-0"
-          style={{ maxHeight: "100px" }}
-          navbarScroll
-        >
-          <Nav.Link href="/">Home</Nav.Link>
 
+          <Nav.Link href="/">Home</Nav.Link>
+{/* 
           {userData && userData.roll === "Client" ? (
             <>
               <Nav.Link href="/Profile">{userData.name}</Nav.Link>
             </>
-          ) : null}
+          ) : null} */}
 
-          {userData && userData.roll === "Admin" ? (
+          {/* {userData && userData.roll === "Admin" ? (
             <>
               <Nav.Link href="/UserList">UserList</Nav.Link>
               <Nav.Link href="/ProductList">ProductList</Nav.Link>
               <Nav.Link href="/Inventory">Inventario</Nav.Link>
               <Nav.Link href="/Profile">{userData.name}</Nav.Link>
             </>
-          ) : null}
+          ) : null} */}
           <Nav.Link href="/Carrito">Carrito</Nav.Link>
 
-          {userData ? (
+          {/* {userData ? (
             <Nav.Link onClick={logout}>Logout</Nav.Link>
           ) : (
             <Nav.Link href="/LoginUp">Login</Nav.Link>
-          )}
-        </Nav>
-      </Container>
-
-      <Container>
+          )} */}
         <Form className="d-flex">
           <Form.Control
             type="search"
@@ -77,6 +69,10 @@ function NavBar({ userData, logout }) {
             value={localSearchValue}
           />
         </Form>
+      </Container>
+
+      <Container>
+
       </Container>
     </Navbar>
   );

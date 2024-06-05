@@ -90,6 +90,10 @@
   color: #fff;
 }
 
+.cart-btn:hover {
+  background-color: #ff5733;
+}
+
 .fa {
   margin-right: 5px;
   color: #fff;

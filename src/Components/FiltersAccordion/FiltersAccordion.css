@@ -1,4 +1,5 @@
 .title2 {
+ 
 
   width: 70%;
 }
@@ -9,18 +10,21 @@
   line-height: 6px;
   cursor: pointer;
   width: 50%;
+  pointer-events: none;
+
 }
 
-.title:hover {
-  background-color: blueviolet;
+/* .title:hover {
+  background-color: #ff5733;
 }
 
 .title2:hover {
-  background-color: blueviolet;
-}
+  background-color: #ff5733;
+} */
 
 .header:hover {
-  background-color: #a23737;
+  background-color: #ff5733;
+  
 }
 
 .popup {
@@ -39,5 +43,5 @@
 }
 
 .list-item:hover {
-  background-color: #3498db
+  background-color: #3498db;
 }
