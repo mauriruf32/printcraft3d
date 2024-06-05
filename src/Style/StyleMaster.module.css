@@ -1,6 +1,6 @@
 :root {
 
-    --color-primary: #5da5f7;
+    --color-primary: #3498db;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
     --color-warning: #d6ba1da4;
@@ -18,24 +18,24 @@
 
 
     /* Nabar style*/
-    --Nabar-background: #5da5f7;
+    --Nabar-background: #3498db;
     --Nabar-text: #fff;
 
     /* Footer atyle */
-    --Footer-background: #5da5f7;
+    --Footer-background: #3498db;
 
     /*Cards*/
     --Cards-background:#3498db;
 
     /*Home*/
     /* Colores de botones de paginado */
-    --btn-paginado-background: #007bff;
-    --btn-paginado-hover: #0056b3;
+    --btn-paginado-background: #3498db;
+    --btn-paginado-hover: #3498db;
     
     /*login*/
-    --BTN-Reginster: #0056b3;
+    --BTN-Reginster: #3498db;
     --text-Text: #fff;
-    --BTN-Reginster: #007bff;
+    --BTN-Reginster: #3498db;
     --BTN-hover: #00b383;
 }
 

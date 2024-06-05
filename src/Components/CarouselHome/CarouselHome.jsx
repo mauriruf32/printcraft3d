@@ -8,9 +8,9 @@ import { Container } from "react-bootstrap";
 function CarouselHome() {
   return (
     
-      <Carousel>
+      <Carousel className="w-5">
         <Carousel.Item interval={5000}>
-          <img className="w-100 d-block" src={image1} alt="img1" />
+          <img className="w-100 " src={image1} alt="img1" />
         </Carousel.Item>
         <Carousel.Item interval={5000}>
           <img className="w-100"  src={image2} alt="img2" />
