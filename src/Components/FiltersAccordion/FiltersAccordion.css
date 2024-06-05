@@ -4,11 +4,23 @@
 }
 
 .title {
-  color: #3767a2;
+  color: #3498db;
   font-size: 18px;
   line-height: 6px;
   cursor: pointer;
   width: 50%;
+}
+
+.title:hover {
+  background-color: blueviolet;
+}
+
+.title2:hover {
+  background-color: blueviolet;
+}
+
+.header:hover {
+  background-color: #a23737;
 }
 
 .popup {
@@ -27,5 +39,5 @@
 }
 
 .list-item:hover {
-  background-color: rgb(243, 249, 255);
+  background-color: #3498db
 }

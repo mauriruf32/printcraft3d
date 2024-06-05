@@ -98,8 +98,8 @@
 .BTNPreviu,
 .BTNNext,
 .BTNResetCards {
-  background-color: var(--btn-paginado-background);
-  color: var(--color-white);
+  background-color:  #000000;
+  color:  #ffffff;
   border: none;
   padding: 10px 20px;
   margin: 0 5px;
@@ -110,7 +110,11 @@
 .BTNPreviu:hover,
 .BTNNext:hover,
 .BTNResetCards:hover {
-  background-color: var(--btn-paginado-hover);
+  background-color: #000000;
+}
+
+.BTNDarkMode:hover{
+  background-color: darkmagenta;
 }
 
 .SpanCurrentPage {

@@ -32,3 +32,11 @@ mb-4,
   font-size: 18px;
   line-height: 16px;
 }
+
+.reset-button:hover {
+  background-color: blueviolet;
+}
+
+.acord:hover {
+  background-color: blueviolet;
+}
