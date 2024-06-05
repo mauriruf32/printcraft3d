@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { URL } from '../../config';
+import { products } from '../../views/Home/Data.js'; // Asegúrate de ajustar la ruta al archivo Data.js según tu estructura de carpetas
 
 const Stars = ({ score }) => {
   const filledStars = Math.floor(score);
@@ -20,48 +20,19 @@ const Stars = ({ score }) => {
 
 const Reviews = ({ productId }) => {
   const [reviews, setReviews] = useState([]);
-  const [users, setUsers] = useState([]);
   const [averageScore, setAverageScore] = useState(0);
 
   useEffect(() => {
-    fetch(`${URL}Reviews/${productId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setReviews(data.reviews);
-        setAverageScore(data.averageScore);
-      })
-      .catch((error) => console.error('Error:', error));
-  }, [productId]);
+    // Filtrar el producto según el productId
+    const product = products.find((product) => product.id === productId);
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      if (reviews && reviews.length > 0) {
-        await fetch(`${URL}Product/${reviews[0]?.ProductId}`)
-          .then((response) => response.json())
-          .then((data) => setAverageScore(data.averageScore.toFixed(2)))
-          .catch((error) => console.error('Error fetching score data:', error));
-      }
-    };
-
-    fetchUsers();
-  }, [reviews]);
-
-  useEffect(() => {
-    if (reviews) {
-      const fetchUsers = async () => {
-        await Promise.all(
-          reviews.map((review) =>
-            fetch(`${URL}User/${review.UserId}`)
-              .then((response) => response.json())
-              .then((data) => setUsers((prevUsers) => [...prevUsers, data.user.firstName]))
-              .catch((error) => console.error('Error fetching user data:', error))
-          )
-        );
-      };
-
-      fetchUsers();
+    if (product) {
+      // Si el producto tiene reviews, establecer las reviews y el promedio de puntaje
+      const productReviews = product.reviews ? [{ description: product.reviews }] : [];
+      setReviews(productReviews);
+      setAverageScore(product.averageScore || 0);
     }
-  }, [reviews]);
+  }, [productId]);
 
   return (
     <div>
@@ -72,9 +43,8 @@ const Reviews = ({ productId }) => {
       {reviews && reviews.length > 0 ? (
         <ul>
           {reviews.map((review, index) => (
-            <li key={review.id}>
+            <li key={index}>
               <p>{review.description}</p>
-              <p>{users[index]}</p>
             </li>
           ))}
         </ul>
@@ -86,6 +56,7 @@ const Reviews = ({ productId }) => {
 };
 
 export default Reviews;
+
 
 
 

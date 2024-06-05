@@ -7,7 +7,7 @@
     border-radius: 2px;
     text-decoration: none;
     justify-content: center;
-    background-color: #3498db;
+    background-color:#5da5f7;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* Añade una sombra 3D */
     transform: perspective(500px) rotateY(10deg); /* Aplica una rotación 3D */
 }
