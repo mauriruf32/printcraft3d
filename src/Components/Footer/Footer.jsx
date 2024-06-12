@@ -5,7 +5,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <div className="container-fluid mt-5 pt-4 pb-4 Footer text-white">
+      <div className="container-fluid mt-5 pt-4  Footer text-white">
         <div className="row">
           <div className="col-md-6">
             <h4>Contacto:</h4>

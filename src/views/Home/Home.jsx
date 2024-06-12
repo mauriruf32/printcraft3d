@@ -1,3 +1,4 @@
+// Home.jsx
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../../Components/Footer/Footer";
@@ -164,6 +165,8 @@ function Home() {
     }
   };
 
+// Modo Osucor
+
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => {
       const newDarkMode = !prevDarkMode;
@@ -193,9 +196,11 @@ function Home() {
       </div>
 
       <div className={`${style.ContainerHome} ${darkMode ? style.darkMode : ""}`}>
-        <button className={style.BTNDarkMode} onClick={toggleDarkMode}>
+<div className={style.BTNDarkMode_div}>
+<button className={style.BTNDarkMode} onClick={toggleDarkMode}>
           {darkMode ? "Modo Claro" : "Modo Oscuro"}
         </button>
+</div>
         <div className={`${style.ContainerCards} ${darkMode ? style.darkMode : ""}`}>
           {loading ? (
             <p>Cargando productos...</p>
@@ -234,7 +239,7 @@ function Home() {
         </div>
       </div>
 
-      <div className={style.ContainerFooter}>
+      <div className={`${style.ContainerFooter} ${darkMode ? style.darkMode : ""}`}>
         <Footer />
       </div>
     </main>
@@ -242,7 +247,6 @@ function Home() {
 }
 
 export default Home;
-
 
 
 // import React, { useEffect, useState } from "react";

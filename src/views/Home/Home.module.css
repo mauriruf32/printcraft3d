@@ -36,7 +36,12 @@
 }
 
 .ContainerFooter {
+  background-color: var(--Footer-background);;
   grid-column: 1/4;
+}
+
+.ContainerFooter.darkMode {
+  background-color: #868686; /* color de fondo para el modo oscuro */
 }
 
 .ContainerHome.darkMode {
@@ -92,8 +97,7 @@
 
 .ContainerFooter {
   width: 100%;
-  background: transparent;
-  overflow: auto;
+  background: var(--Footer-background);
 }
 
 .BTNPreviu,
@@ -120,7 +124,12 @@
 }
 
 .BTNDarkMode{
+  margin-left: 80%;
 color: #ffffff;
+}
+
+.BTNDarkMode-div{
+  position: fixed;
 }
 
 .SpanCurrentPage {

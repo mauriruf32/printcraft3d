@@ -52,7 +52,7 @@ const Aside = ({
             </button>
           </div>
           <FiltersAccordion
-            className={style.acord}
+            
             onMaterialChange={onMaterialChange}
             onCategoryChange={onCategoryChange}
             onSizeChange={onSizeChange}

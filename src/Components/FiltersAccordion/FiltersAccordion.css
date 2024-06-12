@@ -1,11 +1,47 @@
-.title2 {
- 
 
+.title2 {
+  color: #ffff;
   width: 70%;
 }
 
+/* .containerFilters {
+  display: table-row;
+  width: 40%;
+  font-family: Tahoma;
+  font-weight: bold;
+  box-shadow: none;  
+  border: none;
+  font-size: small;
+} */
+
+.title2 button{
+  box-shadow: none; 
+  width: 100%;
+  background-color: #3498db;
+  color: #000000;
+  font-family: Tahoma;
+  font-weight: bold;
+  font-size: medium;
+
+}
+
+.title2 button:hover{
+  background-color: black;
+  color: #ffff;
+  box-shadow: none;  
+
+}
+
+.title2 button:not(.collapsed) {
+  box-shadow: none;  
+  background-color: #3498db;
+  color: #ffffff;
+
+}
+
+
 .title {
-  color: #3498db;
+  color: rgb(255, 255, 255);
   font-size: 18px;
   line-height: 6px;
   cursor: pointer;
@@ -13,19 +49,19 @@
   pointer-events: none;
 
 }
-
-/* .title:hover {
-  background-color: #ff5733;
+/* 
+.title:hover {
+  color: #ff5733;
 }
 
 .title2:hover {
   background-color: #ff5733;
 } */
 
-.header:hover {
+/* .header:hover {
   background-color: #ff5733;
   
-}
+} */
 
 .popup {
   padding: 0 10px 10px;
@@ -43,5 +79,5 @@
 }
 
 .list-item:hover {
-  background-color: #3498db;
+  background-color: #2e6b9448;
 }

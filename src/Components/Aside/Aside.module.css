@@ -13,12 +13,11 @@
 
 .filtros:hover {
   background-color: #ff1d1d;
-  transition: 0.2s ease-in-out;
   border-radius: 0px 10px 10px 0px;
 }
 .darkMode {
   background-color: #07070799; /* Cambia el color de fondo para el modo oscuro */
-  color: #acacac; /* Cambia el color del texto para el modo oscuro */
+  color: #ffffff; /* Cambia el color del texto para el modo oscuro */
 }
 
 .AsideLabel {
