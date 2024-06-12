@@ -124,12 +124,12 @@
 }
 
 .BTNDarkMode{
-  margin-left: 80%;
+  
 color: #ffffff;
 }
 
-.BTNDarkMode-div{
-  position: fixed;
+.BTNDarkMode_div{
+  margin-left: 80%;
 }
 
 .SpanCurrentPage {
