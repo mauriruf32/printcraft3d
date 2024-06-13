@@ -24,7 +24,7 @@ function NavBar({ userData, logout }) {
   return (
     <Navbar className={style.NavBar} expand="lg" fixed="top">
       <Container fluid>
-        <Navbar.Brand href="/">
+        <Navbar.Brand className="justify-content-start" href="/">
           <img
             className="d-inline-block align-top"
             src={logo}
@@ -34,36 +34,34 @@ function NavBar({ userData, logout }) {
           />{" "}
           
         </Navbar.Brand>
-
-
           <Nav.Link href="/">Home</Nav.Link>
-{/* 
+
           {userData && userData.roll === "Client" ? (
             <>
               <Nav.Link href="/Profile">{userData.name}</Nav.Link>
             </>
-          ) : null} */}
+          ) : null}
 
-          {/* {userData && userData.roll === "Admin" ? (
+          {userData && userData.roll === "Admin" ? (
             <>
               <Nav.Link href="/UserList">UserList</Nav.Link>
               <Nav.Link href="/ProductList">ProductList</Nav.Link>
               <Nav.Link href="/Inventory">Inventario</Nav.Link>
               <Nav.Link href="/Profile">{userData.name}</Nav.Link>
             </>
-          ) : null} */}
+          ) : null}
           <Nav.Link href="/Carrito">Carrito</Nav.Link>
 
-          {/* {userData ? (
+          {userData ? (
             <Nav.Link onClick={logout}>Logout</Nav.Link>
           ) : (
             <Nav.Link href="/LoginUp">Login</Nav.Link>
-          )} */}
+          )}
         <Form className="d-flex">
           <Form.Control
             type="search"
             placeholder="Search"
-            className="me-2"
+            className="me-2 "
             aria-label="Search"
             onChange={handleSearchChangeLocal}
             value={localSearchValue}

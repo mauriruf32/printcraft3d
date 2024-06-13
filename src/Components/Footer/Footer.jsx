@@ -22,7 +22,7 @@ function Footer() {
             </ul>
           </div> */}
           <div >
-            <h4 >Redes Sociales:</h4>
+            <h4 className='pb-3'>Nuestras redes sociales:</h4>
             <div className="container_RedSoc"  >
             <a href="https://www.facebook.com" role='button' >
               <img src={facebook} alt="" />

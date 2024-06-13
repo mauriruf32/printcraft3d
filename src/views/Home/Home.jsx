@@ -158,8 +158,8 @@ function Home() {
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "Lo siento!",
-        text: "Debes iniciar sesión",
+        title: " Lo Sentimos.",
+        text: "Esta pagina es solo muestra.",
         showConfirmButton: false,
         timer: 2000,
       });
