@@ -11,6 +11,7 @@ import { addProductInfo } from "../../redux/actions/actions.js";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { products } from "./Data.js";
+import NavBar from "../../Components/NavBar/NavBar.jsx";
 
 function Home() {
   const dispatch = useDispatch();
@@ -180,7 +181,14 @@ function Home() {
   const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   return (
+   
+    
     <main className={`${style.main} ${darkMode ? style.darkMode : ""}`}>
+      <div className={`${style.ContainerNav} ${darkMode ? style.darkMode : ""}`}>
+      <NavBar  />
+
+      </div>
+
       <div className={style.ContainerCarusel}>
         <CarouselHome />
       </div>

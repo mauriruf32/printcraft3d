@@ -2,8 +2,10 @@
 
 
  .NavBar { 
-    background-color: var(--Footer-background);
+  background-color: black;
+color: white;
     width: 100%;
+    display: block;
 }
 /*
 .AsideNavBar{

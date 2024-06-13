@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
-import logo from "../../imagenes/logo.png";
+import logo from "../../imagenes/logo_blanco.png";
 import { useDispatch } from "react-redux";
 import { updateSearchValue } from "../../redux/actions/actions.js";
 import style from "./NavBar.module.css";
@@ -32,7 +32,7 @@ function NavBar({ userData, logout }) {
             width="40"
             height="40"
           />{" "}
-          PrintCraft3D
+          
         </Navbar.Brand>
 
 

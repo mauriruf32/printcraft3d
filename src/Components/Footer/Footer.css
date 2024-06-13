@@ -1,17 +1,16 @@
 @import "../../Style/StyleMaster.module.css";
 
-li {
-  list-style: none;
-  list-style: none;
 
-}
 
- 
+ .container_RedSoc{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ }
 
 .Footer { 
-
-  background-color: transparent;
-
+  background-color: black;
+  
 
 }
 /*

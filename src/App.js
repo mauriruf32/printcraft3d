@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./views/Home/Home.jsx";
 import { Login, Inventory, Profile, UserList, ProductList } from "./views";
-import NavBar from "./Components/NavBar/NavBar.jsx";
+// import NavBar from "./Components/NavBar/NavBar.jsx";
 import DetailProduct from "./views/DetailProduct/DetailProduct.jsx";
 import PagoPaypal from "./Components/PagoPaypal/PagoPaypal";
 import { useSelector, useDispatch } from "react-redux";
@@ -91,11 +91,11 @@ useEffect(() => {
 
   return (
     <div className="App justify-content-center">
-      {pathname !== "/LoginUp" &&
+      {/* {pathname !== "/LoginUp" &&
         pathname !== "/Inventory" &&
         pathname !== "/Register" && (
-          <NavBar userData={userData} logout={logout} />
-        )}
+          // <NavBar userData={userData} logout={logout} />
+        )} */}
 
       <Routes>
         <Route path="/" element={<Home />} />
