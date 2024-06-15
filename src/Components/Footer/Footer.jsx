@@ -13,17 +13,9 @@ function Footer() {
     <footer className="container-fluid Footer text-white">
       <div className="d-flex justify-content-between align-items-center">
         <div className="container_RedSoc ">
-          <h5 className='pb-4 pt-3 bm-1'>Contacto</h5>
+          <h5 className='pb-4 pt-3 bm-1'>Contactanos</h5>
           <div className="pb-3 d-flex">
-            <a href="https://www.facebook.com" role='button'>
-              <img src={facebook} alt="Facebook" />
-            </a>              
-            <a href="https://www.instagram.com" role='button'>
-              <img src={instagram} alt="Instagram" />
-            </a>             
-            <a href="https://www.twitter.com" role='button'>
-              <img src={twitter} alt="Twitter" />
-            </a>
+
             <a href="https://wa.me/" role='button'>
               <img src={phone} alt="Phone" />
             </a>
@@ -35,11 +27,27 @@ function Footer() {
             </a>
           </div>
         </div>
+
         <div className="logo-section">
           <a href="/" role='button'>
             <img src={logoLuna} alt="logo_luna" width="100" height="100"/>
           </a>
         </div>
+        <div className="container_RedSoc ">
+          <h5 className='pb-4 pt-3 bm-1'>Seguinos</h5>
+          <div className="pb-3 d-flex">
+            <a href="https://www.facebook.com" role='button'>
+              <img src={facebook} alt="Facebook" />
+            </a>              
+            <a href="https://www.instagram.com" role='button'>
+              <img src={instagram} alt="Instagram" />
+            </a>             
+            <a href="https://www.twitter.com" role='button'>
+              <img src={twitter} alt="Twitter" />
+            </a>
+          </div>
+        </div>
+
       </div>
       <p className="mt-2 text-center">
         &copy;{new Date().getFullYear()} PrintCraft3D - All Rights Reserved.
