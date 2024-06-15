@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import logo from "../../imagenes/logo_blanco.png";
+import carrito from "../../imagenes/iconmonstr-shopping-cart-23-32.png";
+import personita from "../../imagenes/iconmonstr-user-6-32 (1).png";
 import { useDispatch } from "react-redux";
 import { updateSearchValue } from "../../redux/actions/actions.js";
 import style from "./NavBar.module.css";
@@ -29,12 +31,14 @@ function NavBar({ userData, logout }) {
             className="d-inline-block align-top"
             src={logo}
             alt="logo"
-            width="40"
+            width="50"
             height="40"
           />{" "}
           
         </Navbar.Brand>
-          <Nav.Link href="/">Home</Nav.Link>
+
+        <Nav.Link className="mr-5" href="/">Home</Nav.Link>
+   
 
           {userData && userData.roll === "Client" ? (
             <>
@@ -50,14 +54,15 @@ function NavBar({ userData, logout }) {
               <Nav.Link href="/Profile">{userData.name}</Nav.Link>
             </>
           ) : null}
-          <Nav.Link href="/Carrito">Carrito</Nav.Link>
-
           {userData ? (
             <Nav.Link onClick={logout}>Logout</Nav.Link>
           ) : (
-            <Nav.Link href="/LoginUp">Login</Nav.Link>
+            <Nav.Link className="ml-5"  href="/LoginUp"><img width="25"
+            height="25" src={personita} alt="" /></Nav.Link>
           )}
-        <Form className="d-flex">
+          <Nav.Link className="ml-5" href="/Carrito"><img             width="30"
+            height="30" src={carrito} alt="" /></Nav.Link>
+        <Form className="d-flex justify-content-end">
           <Form.Control
             type="search"
             placeholder="Search"
@@ -67,11 +72,7 @@ function NavBar({ userData, logout }) {
             value={localSearchValue}
           />
         </Form>
-      </Container>
-
-      <Container>
-
-      </Container>
+      </Container> 
     </Navbar>
   );
 }

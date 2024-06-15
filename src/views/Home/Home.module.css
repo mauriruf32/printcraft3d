@@ -157,5 +157,9 @@ color: #ffffff;
   width: 100%;
   grid-column: 2/4;
   padding: 2rem;
-  
+
+}
+
+.paginationWrapper.darkMode {
+  color: #ffffff;
 }

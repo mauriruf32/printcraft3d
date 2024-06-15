@@ -26,10 +26,10 @@ mb-4,
 }
 
 .reset-button {
-  background: none;
+  background-color: #3498db;
   border: 0;
-  color: #4483d0;
-  font-size: 18px;
+  color: #ffffff;
+  font-size: 16px;
   line-height: 16px;
 }
 

@@ -236,7 +236,7 @@ function Home() {
           )}
         </div>
       </div>
-      <div className={style.paginationWrapper}>
+      <div  className={`${style.paginationWrapper} ${darkMode ? style.darkMode : ""}`}>
         <div>
           <Paginado
             getCurrentPage={getCurrentPage}

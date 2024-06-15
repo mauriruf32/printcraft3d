@@ -1,12 +1,27 @@
 @import "../../Style/StyleMaster.module.css";
 
+h5 {
+  margin-right: 70%;
+}
 
-
- .container_RedSoc{
+ /* .container_RedSoc{
  display: flex;
- justify-content: space-around;
- align-items: center;
- }
+
+ } */
+
+ .container_RedSoc a {
+  margin-right: 10px;
+}
+
+.logo-section img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* .logo-section{
+  justify-content: end;
+  margin-left: 70%;
+  } */
 
 .Footer { 
   background-color: black;

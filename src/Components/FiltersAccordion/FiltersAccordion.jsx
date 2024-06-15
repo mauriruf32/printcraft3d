@@ -70,7 +70,7 @@ const FiltersAccordion = ({
   return (
     <Accordion defaultActiveKey={["0"]}  className="title2" >
       <Accordion.Item   eventKey="0">
-        <Accordion.Header tyle={{ backgroundColor: '#343a40' }}  >
+        <Accordion.Header style={{ backgroundColor: '#343a40' }}  >
           <div className="title">
             <strong>Materiales</strong>
           </div>

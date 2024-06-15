@@ -4,6 +4,10 @@
   width: 70%;
 }
 
+.title2 .accordion {
+  background: #ff0000;
+}
+
 /* .containerFilters {
   display: table-row;
   width: 40%;
@@ -58,10 +62,9 @@
   background-color: #ff5733;
 } */
 
-/* .header:hover {
-  background-color: #ff5733;
-  
-} */
+.accordion-item{
+  background-color: #e6e6e6;
+}
 
 .popup {
   padding: 0 10px 10px;
@@ -76,8 +79,10 @@
   justify-content: space-between;
   line-height: 6px;
   padding: 0.5rem 0;
+  
 }
 
 .list-item:hover {
-  background-color: #2e6b9448;
+  background-color: #ff5733; 
+  color: #ffffff;
 }
