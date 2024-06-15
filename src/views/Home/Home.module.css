@@ -83,7 +83,11 @@
     width: 100%;
     margin: 0;
   }
+
+
 }
+
+
 
 .ContainerAsaider,
 .ContainerFilter {
@@ -154,10 +158,10 @@ color: #ffffff;
   display: flex;
   justify-content: center;
   margin-bottom: 60px;
-  width: 100%;
+  width: 85%;
   grid-column: 2/4;
   padding: 2rem;
-
+ 
 }
 
 .paginationWrapper.darkMode {
