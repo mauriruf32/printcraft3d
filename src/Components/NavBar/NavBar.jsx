@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import logo from "../../imagenes/logo_blanco.png";
 import carrito from "../../imagenes/iconmonstr-shopping-cart-23-32.png";
+import casita from "../../imagenes/iconmonstr-home-7-32.png";
 import personita from "../../imagenes/iconmonstr-user-6-32 (1).png";
 import { useDispatch } from "react-redux";
 import { updateSearchValue } from "../../redux/actions/actions.js";
@@ -37,7 +38,8 @@ function NavBar({ userData, logout }) {
           
         </Navbar.Brand>
 
-        <Nav.Link className="mr-5" href="/">Home</Nav.Link>
+        <Nav.Link className="ml-5" href="/home"><img             width="30"
+            height="30" src={casita} alt="" /></Nav.Link>
    
 
           {userData && userData.roll === "Client" ? (
