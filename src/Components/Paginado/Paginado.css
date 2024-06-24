@@ -2,6 +2,7 @@
   margin: 1rem;
   color: aliceblue;
   border-radius: 5px;
+  background-color: #3498db;
 }
 .Pbtn:hover {
   background-color: #ff5733;
